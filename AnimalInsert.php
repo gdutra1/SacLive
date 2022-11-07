@@ -1,6 +1,6 @@
 <?php
     include "Connect.php";
-    session_start();
+    //session_start();
     $cpf = $_POST["txtCpf"];
     $nome = $_POST["txtNome"];
     $especie = $_POST["txtEspecie"];
@@ -8,7 +8,7 @@
     $peso = $_POST["txtPeso"];
     $altura = $_POST["txtAltura"];
     $largura = $_POST["txtLargura"];
-    $obs = $_POST["txtObservacoes"]
+    $obs = $_POST["txtObservacoes"];
 
 
     $sql = "INSERT INTO animal (nome, cpf_dono, especie_animal, cnpj_clinica, data_nascimento, peso, altura, largura, observacoes) VALUES ('".$nome."',".$cpf.",'".$especie."',".$cnpj."".$nascimento.",".$peso.",".$altura.",".$largura.",'".$obs."')";
