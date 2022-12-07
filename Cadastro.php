@@ -35,7 +35,7 @@
     <section class="u-clearfix u-section-1" id="sec-48e0">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-form-1">
-          <form action="ClinicaInsert.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
+          <form action="ClinicInsert.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-0f4e" class="u-label">Nome</label>
               <input type="text" placeholder="Insira seu Nome" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
