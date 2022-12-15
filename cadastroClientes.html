@@ -92,12 +92,14 @@
               <input type="email" placeholder="Email do Cliente" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-email u-form-group">
-              <label for="cnpj-0f4e" class="u-label">CPF</label>
-              <input type="cnpj" placeholder="CPF do Cliente" id="email-0f4e" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
+              <label for="txtCpf" class="u-label">CPF</label>
+              <input type="cpf" maxlength="14" onkeypress="aplicarCpfMask('txtCpf')" placeholder="CPF do Cliente" id="txtCpf" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-group u-form-group-3">
+              <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
               <label for="senha-e8fa" class="u-label">Telefone Celular</label>
-              <input type="tel" pattern="[0-9]{5}-[0-9]{4}" placeholder="XXXXX-XXXX" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+              <input type="tel" maxlength = "15" onkeypress="aplicarTelMask('txtTelefone')" maxlenght="15" pattern="[0-9]{5}-[0-9]{4}" placeholder="(XX) XXXXX-XXXX" id="txtTelefone" minnlength="15" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <a href="#" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">Cadastrar<br>
