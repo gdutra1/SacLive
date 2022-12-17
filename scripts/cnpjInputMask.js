@@ -1,5 +1,5 @@
-function aplicarCnpjMask(idDocumento){
-    v = document.getElementById(idDocumento).value
+function aplicarCnpjMask(idElement){
+    v = document.getElementById(idElement).value
 
     v=v.replace(/\D/g,"");
 
@@ -8,5 +8,5 @@ function aplicarCnpjMask(idDocumento){
     v=v.replace(/\.(\d{3})(\d)/,".$1/$2")
     v=v.replace(/(\d{4})(\d)/,"$1-$2")
 
-    document.getElementById(idDocumento).value = v;
+    document.getElementById(idElement).value = v;
 }
