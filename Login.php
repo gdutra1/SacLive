@@ -3,11 +3,11 @@
 
     session_start();
     
-$email = $conn->real_escape_string($_POST["txtEmail"]);
+$email = $connect->real_escape_string($_POST["txtEmail"]);
 $senha = $_POST["txtSenha"];
 $cnpj = $_POST["txtCnpj"];
 $sql = "SELECT * FROM saclive.clinica WHERE email = '$email' and senha = '$senha' and cnpj =  '$cnpj'";
-$resultado = $conn->query($sql);
+$resultado = $connect->query($sql);
 
 if ($resultado -> num_rows > 0) {
     $dataUsu = $resultado -> fetch_assoc();
