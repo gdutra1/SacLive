@@ -1,6 +1,6 @@
 <?php
-        include_once("Connect.php");
-        session_start();
+    include_once("Connect.php");
+    session_start();
     $cnpj = $_SESSION["cnpj"];
     $sql = "SELECT * FROM cliente WHERE cnpj_clinica =" $_POST['$cnpj'] ;
     $result = $connect->query($sql);
@@ -10,5 +10,5 @@
     } else {
         echo "Nenhum dado encontrado."
     }
-}
+
 ?>
