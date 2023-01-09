@@ -6,6 +6,7 @@
     $result = $connect->query($sql);
     if ($result->num_rows > 0) {
 
+        ?>
         <table class=>
             <tr>
                 <th>CPF</th>
