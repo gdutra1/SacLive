@@ -1,10 +1,11 @@
 <?php
-    include "Connect.php";
-    $sql = "DELETE * FROM cliente WHERE cpf = ".$_GET["cpf"]. " and cnpj_clinica = ".$_GET["cnpj"];
+    include ("Connect.php");
+    $sql = "DELETE * FROM cliente WHERE cpf = ".$_GET["cpf"];
     if ($connect->query($sql) === TRUE) {
-        echo "Deletado com sucesso.";
+        echo "<script>alert('Deletado com sucesso');</script>";
+        echo "<script>window.location = 'ClientList.php';</script>";
     } else {
-        echo "Erro ao deletar:" . $sql . "<br>" . $connect->error;
+        echo "<script>alert('Erro ao excluir cliente');</script>";
     }
     $connect->close();
 ?>
