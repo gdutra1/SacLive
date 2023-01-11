@@ -15,6 +15,7 @@ if ($resultado -> num_rows > 0) {
     $_SESSION["cnpj"] = $dataUsu["cnpj"];
     header("location:inner-page.html");
 } else {
-    echo $sql;
-} 
+    echo "<script>alert('Ocorreu um erro. Verifique os dados inseridos e tente novamente.')</script>";
+    echo "<script>window.location.replace('Login.html')</script>";
+}
 ?>
