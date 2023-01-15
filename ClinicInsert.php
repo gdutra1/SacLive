@@ -8,8 +8,7 @@
 
     $sql = "INSERT INTO clinica (cnpj, nome, email, senha) VALUES ('".$cnpj."','".$nome."','".$email."','".$senha."')";
     if ($connect->query($sql) === TRUE) {
-        echo "Cadastro realizado com sucesso";
-        header("location:Login.php");
+        echo "<script>window.location.href = 'Login.html'</script>";
     } else{
         echo "Erro ao Inserir: " . $sql . "<br>" . $connect->error;
     }
