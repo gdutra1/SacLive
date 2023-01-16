@@ -50,16 +50,16 @@
           <li><a class="nav-link scrollto " href="index.html">Home</a></li>
           <li class="dropdown"><a href="#"><span>Listagem</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Animal</a></li>
+              <li><a href="AnimalList.php">Animal</a></li>
               <li><a href="ClientList.php">Cliente</a></li>
-              <li><a href="#">Veterinário</a></li>
+              <li><a href="VetList.php">Veterinário</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Cadastrar</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Animal</a></li>
+              <li><a href="cadastroAnimal.php">Animal</a></li>
               <li><a href="cadastroClientes.php">Cliente</a></li>
-              <li><a href="#">Veterinário</a></li>
+              <li><a href="cadastroVeterinario.php">Veterinário</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Marcar Consulta</a></li>
@@ -76,7 +76,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-        <h2>Bem-Vindo(a)!<?php echo $_SESSION["nome"]  ?></h2>
+        <h2>Bem-Vindo(a) <?php echo $_SESSION["nome"]?>!</h2>
       </div>
     </section><!-- End Breadcrumbs -->
 
