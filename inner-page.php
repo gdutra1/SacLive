@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Arsha Bootstrap Template</title>
+  <title>Saclive</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -57,7 +58,7 @@
           <li class="dropdown"><a href="#"><span>Cadastrar</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Animal</a></li>
-              <li><a href="cadastroClientes.html">Cliente</a></li>
+              <li><a href="cadastroClientes.php">Cliente</a></li>
               <li><a href="#">Veterinário</a></li>
             </ul>
           </li>
@@ -75,68 +76,34 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-        <h2>Lista de clientes cadastrados</h2>
+        <h2>Bem-Vindo(a)!<?php echo $_SESSION["nome"]  ?></h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          Example inner page template
+        </p>
       </div>
     </section>
-    
-    <section class="inner-page">
-<?php
-    include_once("Connect.php");
-    $cnpj = $_SESSION["cnpj"];
-    $sql = "SELECT * FROM cliente WHERE cnpj_clinica = '$cnpj'";
-    $resultado = $connect->query($sql);
-    if ($resultado->num_rows > 0) {
 
-        ?>
-        <table class=>
-            <tr>
-                <th>CPF</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </tr>
+  </main><!-- End #main -->
 
-        <?php
-        while($row = $resultado->fetch_assoc()) {
-        ?>
-            <tr>
-                <td><?php echo $row["cpf"] ?></td>
-                <td><?php echo $row["nome"] ?></td>
-                <td><?php echo $row["email"] ?></td>
-                <td><?php echo $row["telefone"] ?></td>
-                <td><a href="#">Editar</a></td>
-                <td><a href="#">Excluir</a></td>
-            </tr>
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-            <?php
-                }
-            ?>
-            </table>
-        <?php
-            } else {
-                echo "Nenhum dado encontrado.";
-            }
-        ?>
-        </section>
-        
-    </main><!-- End #main -->
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 

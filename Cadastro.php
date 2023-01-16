@@ -52,6 +52,15 @@
               <label for="senha-e8fa" class="u-label">Crie uma senha</label>
               <input type="password" placeholder="Mínimo 5 caracteres" id="senha-e8fa" minnlength="5" name="txtSenha" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
             </div>
+            <div class="u-form-group u-form-select u-form-group-4">
+              <label for="select-b189" class="u-label">Tipo de usuário</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-b189" name="tipo" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-4">
+                  <option value="Cliente">Administrador</option>
+                  <option value="Veterinário">Secretariado</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+              </div>
             </div>
             <!--Aqui ó-->
             <div class="u-align-center u-form-group u-form-submit">
