@@ -1,3 +1,30 @@
 #loginForm {
     margin-top: 2cm;
 }
+
+table, th, td{
+    border-collapse: collapse;
+}
+
+table{
+    width: 90%;
+    margin-left: 2cm;
+}
+
+td, th{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+th{
+    height: 50px;
+    background-color: rgb(0, 226, 151);
+    color: white;
+}
+
+td{
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: rgb(214, 255, 241);}
