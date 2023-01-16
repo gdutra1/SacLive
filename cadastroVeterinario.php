@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Cadastro Clientes</title>
+  <title>Cadastro Veterinário</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -65,38 +65,38 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-        <h2 id="titulo">Novo Cliente</h2>
+        <h2 id="titulo">Novo Veterinário</h2>
       </div>
     </section><!-- End Breadcrumbs -->
 
     <!--Formulário-->
-    <section class="u-clearfix u-section-1" id="sec-48e0">
+    <section class="u-clearfix u-section-1" id="sec-eabd">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form-15">
-          <form action="ClientInsert.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
-            <div class="u-form-group u-form-name">
-              <label for="name-0f4e" class="u-label">Nome</label>
-              <input type="text" placeholder="Nome do cliente" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
+        <div class="u-align-center u-form u-form-1">
+          <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="marcarConsulta" style="padding: 12px;">
+            <div class="u-form-email u-form-group u-label-top">
+              <label for="email-50d6" class="u-label u-text-palette-1-dark-1 u-label-1">Nome do Veterinário</label>
+              <input type="email" id="email-50d6" name="txtNome" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-1" required="" autofocus="autofocus">
             </div>
-            <div class="u-form-email u-form-group">
-              <label for="email-0f4e" class="u-label">Email</label>
-              <input type="email" placeholder="Email do Cliente" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+            <div class="u-form-group u-label-top u-form-group-2">
+              <label for="text-2b5b" class="u-label u-text-palette-1-dark-1 u-label-2">Email</label>
+              <input type="text" id="text-2b5b" name="txtEmail" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-2">
             </div>
-            <div class="u-form-email u-form-group">
-            <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
-              <label for="cnpj-0f4e" class="u-label">CPF</label>
-              <input type="cnpj" placeholder="CPF do Cliente" id="email-0f4e" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+            <div class="u-form-group u-label-top u-form-group-3">
+              <label for="text-e482" class="u-label u-text-palette-1-dark-1 u-label-3">CTPS</label>
+              <input type="text" placeholder="" id="text-e482" name="txtCtps" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-3">
             </div>
-            <div class="u-form-group u-form-group-3">
-            <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
-              <label for="senha-e8fa" class="u-label">Telefone Celular</label>
-              <input type="tel"  placeholder="XXXXX-XXXX" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+            <div class="u-form-group u-label-top u-form-group-4">
+              <label for="text-7bab" class="u-label u-text-palette-1-dark-1 u-label-4">Senha</label>
+              <input type="text" placeholder="" id="text-7bab" name="txtSenha" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-4">
             </div>
-            <div class="u-align-center u-form-group u-form-submit">
-              <input type="submit" value="Cadastrar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
+            <div class="u-align-center u-form-group u-form-submit u-label-top">
+              <input type="submit" value="Cadastrar" class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-radius-32 u-btn-1"><br>
             </div>
           </form>
-          </section>
+        </div>
+      </div>
+    </section>
                 <!--End formulário-->
   </main><!-- End #main -->
 

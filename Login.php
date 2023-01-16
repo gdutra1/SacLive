@@ -13,7 +13,7 @@ if ($resultado -> num_rows > 0) {
     $dataUsu = $resultado -> fetch_assoc();
     $_SESSION["nome"] = $dataUsu["nome"];
     $_SESSION["cnpj"] = $dataUsu["cnpj"];
-    header("location:inner-page.html");
+    header("location:inner-page.php");
 } else {
     echo "<script>alert('Ocorreu um erro. Verifique os dados inseridos e tente novamente.')</script>";
     echo "<script>window.location.replace('Login.html')</script>";

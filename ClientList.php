@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/cssParticular.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.8.0
@@ -46,22 +47,14 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto " href="inner-page.php">Voltar</a></li>
           <li class="dropdown"><a href="#"><span>Listagem</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Animal</a></li>
+              <li><a href="AnimalList.php">Animal</a></li>
               <li><a href="ClientList.php">Cliente</a></li>
-              <li><a href="#">Veterinário</a></li>
+              <li><a href="VetList.php">Veterinário</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Cadastrar</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Animal</a></li>
-              <li><a href="cadastroClientes.html">Cliente</a></li>
-              <li><a href="#">Veterinário</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Marcar Consulta</a></li>
           <li><a class="getstarted scrollto" href="index.html">Sair</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -88,7 +81,7 @@
     if ($resultado->num_rows > 0) {
 
         ?>
-        <table class=>
+        <table>
             <tr>
                 <th>CPF</th>
                 <th>Nome</th>
