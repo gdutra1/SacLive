@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="Nicepage assets/Cadastro.css" media="screen">
 <link rel="stylesheet" href="Nicepage assets/nicepage.css" media="screen">
 
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   

@@ -34,6 +34,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <script type="text/javascript">
+function apagar(nome, cpf) {
+if (window.confirm("Deseja realmente apagar este registro:\n" + "Nome: " + nome + "\n" + "CPF: " + cpf)) {
+window.location = 'ClientDelete.php?cpf=' + cpf;
+}
+}
+</script>
+
 </head>
 
 <body>
@@ -100,7 +109,8 @@
                 <td><?php echo $row["email"] ?></td>
                 <td><?php echo $row["telefone"] ?></td>
                 <td><a href="#">Editar</a></td>
-                <td><a href="#">Excluir</a></td>
+                <td><a href="#" onclick="apagar('<?php echo $row["nome"] ?>','<?php echo
+$row["cpf"] ?>');"> Excluir</a></td>
             </tr>
 
             <?php

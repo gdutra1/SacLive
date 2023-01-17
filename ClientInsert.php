@@ -9,7 +9,8 @@
 
     $sql = "INSERT INTO cliente (cpf, nome, email, telefone, cnpj_clinica) VALUES ('".$cpf."','".$nome."','".$email."','".$telefone."','".$cnpj."')";
     if ($connect->query($sql) === TRUE) {
-        echo "Cadastro realizado com sucesso";
+        echo "<script>alert('Cadastro realizado com sucesso!');</script>";
+        echo "<script>window.location = 'cadastroClientes.php';</script>";
     } else{
         echo "Erro ao Inserir: " . $sql . "<br>" . $connect->error;
     }
