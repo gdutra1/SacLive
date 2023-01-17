@@ -1,0 +1,380 @@
+.formBotao {
+    /* Font & Text */
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 25.6px;
+    text-decoration: rgb(255, 255, 255);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgb(40, 184, 176);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(255, 255, 255);
+    /* Box */
+    height: 45.6px;
+    width: 132.917px;
+    border: 0px none rgba(0, 0, 0, 0);
+    border-top: 0px none rgba(0, 0, 0, 0);
+    border-right: 0px none rgba(0, 0, 0, 0);
+    border-bottom: 0px none rgba(0, 0, 0, 0);
+    border-left: 0px none rgba(0, 0, 0, 0);
+    margin: 1px 0px;
+    padding: 10px 30px;
+    max-height: none;
+    min-height: 0px;
+    max-width: none;
+    min-width: 0px;
+    /* Positioning */
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    float: none;
+    display: inline-block;
+    clear: none;
+    z-index: auto;
+    /* List */
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
+    /* Table */
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    caption-side: top;
+    empty-cells: show;
+    table-layout: auto;
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: pointer;
+    visibility: visible;
+    /* Effects */
+    transform: none;
+    transition: all 0s ease 0s;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: none;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.formInputField {
+    /* Font & Text */
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 25.6px;
+    text-decoration: rgb(17, 17, 17);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgb(234, 253, 252);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(17, 17, 17);
+    /* Box */
+    height: 51.6px;
+    width: 550px;
+    border: 3px solid rgb(44, 204, 196);
+    border-top: 3px solid rgb(44, 204, 196);
+    border-right: 3px solid rgb(44, 204, 196);
+    border-bottom: 3px solid rgb(44, 204, 196);
+    border-left: 3px solid rgb(44, 204, 196);
+    margin: 0px;
+    padding: 10px 12px;
+    max-height: none;
+    min-height: 0px;
+    max-width: none;
+    min-width: 0px;
+    /* Positioning */
+    position: static;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    float: none;
+    display: block;
+    clear: none;
+    z-index: auto;
+    /* List */
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
+    /* Table */
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    caption-side: top;
+    empty-cells: show;
+    table-layout: auto;
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: text;
+    visibility: visible;
+    /* Effects */
+    transform: none;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: none;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: none;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.formLabel {
+    /* Font & Text */
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 25.6px;
+    text-decoration: rgb(17, 17, 17);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(17, 17, 17);
+    /* Box */
+    height: auto;
+    width: auto;
+    border: 0px none rgb(17, 17, 17);
+    border-top: 0px none rgb(17, 17, 17);
+    border-right: 0px none rgb(17, 17, 17);
+    border-bottom: 0px none rgb(17, 17, 17);
+    border-left: 0px none rgb(17, 17, 17);
+    margin: 0px;
+    padding: 0px;
+    max-height: none;
+    min-height: 0px;
+    max-width: none;
+    min-width: 0px;
+    /* Positioning */
+    position: static;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    float: none;
+    display: inline;
+    clear: none;
+    z-index: auto;
+    /* List */
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
+    /* Table */
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    caption-side: top;
+    empty-cells: show;
+    table-layout: auto;
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: default;
+    visibility: visible;
+    /* Effects */
+    transform: none;
+    transition: all 0s ease 0s;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: none;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.formDivBotao {
+    /* Font & Text */
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 25.6px;
+    text-decoration: rgb(17, 17, 17);
+    text-align: center;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(17, 17, 17);
+    /* Box */
+    height: 47.6px;
+    width: 560px;
+    border: 0px none rgb(17, 17, 17);
+    border-top: 0px none rgb(17, 17, 17);
+    border-right: 0px none rgb(17, 17, 17);
+    border-bottom: 0px none rgb(17, 17, 17);
+    border-left: 0px none rgb(17, 17, 17);
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
+    max-height: none;
+    min-height: auto;
+    max-width: none;
+    min-width: auto;
+    /* Positioning */
+    position: static;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    float: none;
+    display: block;
+    clear: none;
+    z-index: auto;
+    /* List */
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
+    /* Table */
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    caption-side: top;
+    empty-cells: show;
+    table-layout: auto;
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: auto;
+    visibility: visible;
+    /* Effects */
+    transform: none;
+    transition: all 0s ease 0s;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: none;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.formDiv {
+    /* Font & Text */
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 25.6px;
+    text-decoration: rgb(17, 17, 17);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(17, 17, 17);
+    /* Box */
+    height: 77.2px;
+    width: 560px;
+    border: 0px none rgb(17, 17, 17);
+    border-top: 0px none rgb(17, 17, 17);
+    border-right: 0px none rgb(17, 17, 17);
+    border-bottom: 0px none rgb(17, 17, 17);
+    border-left: 0px none rgb(17, 17, 17);
+    margin: 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
+    max-height: none;
+    min-height: auto;
+    max-width: none;
+    min-width: auto;
+    /* Positioning */
+    position: static;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    float: none;
+    display: block;
+    clear: none;
+    z-index: auto;
+    /* List */
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
+    /* Table */
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    caption-side: top;
+    empty-cells: show;
+    table-layout: auto;
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: auto;
+    visibility: visible;
+    /* Effects */
+    transform: none;
+    transition: all 0s ease 0s;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: none;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
