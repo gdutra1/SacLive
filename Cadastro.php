@@ -11,7 +11,7 @@
     <script class="u-script" type="text/javascript" src="Nicepage assets/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.18.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
+    <link rel="stylesheet" href="css/formStyle.css">
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -35,26 +35,30 @@
     <section class="u-clearfix u-section-1" id="sec-48e0">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-form-1">
-          <form action="ClinicInsert.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
-            <div class="u-form-group u-form-name">
-              <label for="name-0f4e" class="u-label">Nome</label>
-              <input type="text" placeholder="Insira seu Nome" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
+          <form action="ClinicInsert.php" method="post">
+            <div class = "formDiv">
+              <script src="scripts/cnpjInputMask.js" type="text/javascript"> </script>
+              <label class ="formLabel" for="txtCnpj">CNPJ:</label>
+              <input class = "formInputField" type="text" id = "txtCnpj" onkeypress= "aplicarCnpjMask('txtCnpj')" name="txtCnpj" minlength="18" maxlength="18" required>
             </div>
-            <div class="u-form-email u-form-group">
-              <label for="email-0f4e" class="u-label">Email</label>
-              <input type="email" placeholder="Insira um endereço de email válido" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+
+            <div class = "formDiv">
+              <label class = "formLabel" for="txtNome">Nome:</label>
+              <input class = "formInputField" type="text" id = "txtNome" name="txtNome" minlength="3" required>
             </div>
-            <div class="u-form-email u-form-group">
-              <label for="cnpj-0f4e" class="u-label">CNPJ</label>
-              <input type="cnpj" placeholder="Insira seu CNPJ" id="email-0f4e" name="txtCnpj" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+
+            <div class = "formDiv">
+              <label class = "formLabel" for="txtEmail">Email:</label>
+              <input class = "formInputField" type="email" id = "txtEmail" name="txtEmail" required>
             </div>
-            <div class="u-form-group u-form-group-3">
-              <label for="senha-e8fa" class="u-label">Crie uma senha</label>
-              <input type="password" placeholder="Mínimo 5 caracteres" id="senha-e8fa" minnlength="5" name="txtSenha" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+
+            <div class="formDiv">
+              <label for="txtSenha" class = "formLabel">Senha:</label>
+              <input type="password" id ="txtSenha" class ="formInputField" name="txtSenha">
             </div>
-            <!--Aqui ó-->
-            <div class="u-align-center u-form-group u-form-submit">
-              <input type="submit" value="Cadastrar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
+
+            <div class="formDivBotao">
+              <input class = "formBotao" type="submit" value="Cadastrar">
             </div>
           </form>
         </div>
