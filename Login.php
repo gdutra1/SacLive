@@ -16,6 +16,6 @@ if ($resultado -> num_rows > 0) {
     header("location:inner-page.php");
 } else {
     echo "<script>alert('Ocorreu um erro. Verifique os dados inseridos e tente novamente.')</script>";
-    echo "<script>window.location.replace('Login.html')</script>";
+    echo "<script>window.location.replace('LoginPage.php')</script>";
 }
 ?>

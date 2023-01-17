@@ -8,7 +8,9 @@
 
     $sql = "INSERT INTO clinica (cnpj, nome, email, senha) VALUES ('".$cnpj."','".$nome."','".$email."','".$senha."')";
     if ($connect->query($sql) === TRUE) {
-        echo "<script>window.location.href = 'Login.html'</script>";
+        $_SESSION["nome"] = $nome;
+        $_SESSION["cnpj"] = $cnpj;
+        echo "<script>window.location = 'inner-page.php';</script>";
     } else{
         echo "Erro ao Inserir: " . $sql . "<br>" . $connect->error;
     }

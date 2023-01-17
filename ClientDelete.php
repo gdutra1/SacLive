@@ -6,6 +6,7 @@
         echo "<script>window.location = 'ClientList.php';</script>";
     } else {
         echo "<script>alert('Erro ao excluir cliente');</script>";
+        echo "<script>window.location = 'ClientList.php';</script>";
     }
     $connect->close();
 ?>
