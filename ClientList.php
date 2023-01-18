@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Lista de Clientes - SacLive</title>
+  <title>Listagem Clientes</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -60,7 +60,6 @@ window.location = 'ClientDelete.php?cpf=' + cpf;
           <li class="dropdown"><a href="#"><span>Listagem</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="AnimalList.php">Animal</a></li>
-              <li><a href="ClientList.php">Cliente</a></li>
               <li><a href="VetList.php">Veterinário</a></li>
             </ul>
           </li>
