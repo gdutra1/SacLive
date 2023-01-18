@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="SacLive">
     <meta name="description" content="">
-    <title>Cadastro</title>
+    <title>Cadastrar Clínica - SacLive</title>
     <link rel="stylesheet" href="Nicepage assets/nicepage.css" media="screen">
 <link rel="stylesheet" href="Nicepage assets/Cadastro.css" media="screen">
     <script class="u-script" type="text/javascript" src="Nicepage assets/jquery.js" defer=""></script>
