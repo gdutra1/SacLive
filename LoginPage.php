@@ -67,16 +67,17 @@
         <div class="u-align-center u-form u-form-1">
           <form action="Login.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="marcarConsulta" style="padding: 12px;">
             <div class="u-form-email u-form-group u-label-top">
-              <label for="email-50d6" class="u-label u-text-palette-1-dark-1 u-label-1">E-mail</label>
+              <label for="email-50d6" class="u-label u-text-palette-1-dark-1 u-label-1">E-mail:</label>
               <input type="text" id="email-50d6" name="txtEmail" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-1" required="" autofocus="autofocus">
             </div>
             <div class="u-form-group u-label-top u-form-group-2">
-              <label for="text-7bab" class="u-label u-text-palette-1-dark-1 u-label-2">Senha</label>
+              <label for="text-7bab" class="u-label u-text-palette-1-dark-1 u-label-2">Senha:</label>
               <input type="password" placeholder="" id="text-7bab" name="txtSenha" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-2">
             </div>
             <div class="u-form-date u-form-group u-label-top u-form-group-3">
-              <label for="date-702f" class="u-label u-text-palette-1-dark-1 u-label-3">CNPJ</label>
-              <input type="text" id="date-702f" name="txtCnpj" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-3" required="">
+              <script src="scripts/cnpjInputMask.js" type="text/javascript"> </script>
+              <label for="txtCnpj" class="u-label u-text-palette-1-dark-1 u-label-3">CNPJ:</label>
+              <input type="text" id="txtCnpj" name="txtCnpj" maxlength="18" minlength = "18" onkeypress= "aplicarCnpjMask('txtCnpj')" class="u-border-3 u-border-palette-4-base u-input u-input-rectangle u-palette-4-light-3 u-radius-25 u-input-3" required="">
             </div>
               <div class="u-align-center u-form-group u-form-submit u-label-top">
               <input type="submit" value="Login" class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-radius-32 u-btn-1">
