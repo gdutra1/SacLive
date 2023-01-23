@@ -1,22 +1,3 @@
-<?php
-    include_once("Connect.php");
-
-    if (isset($_POST["txtNome"])) {
-        $nome = $_POST["txtNome"];
-        $email = $_POST["txtEmail"];
-        $telefone = $_POST["txtTelefone"];
-
-        $sql = "UPDATE cliente SET nome = '$nome.', email = '$email', telefone = '$telefone' WHERE cpf = $cpf";
-    
-        If ($connect->query($sql) === TRUE) {
-            echo "<script>alert('Registro atualizado com sucesso!');</script>";
-            echo "<script>window.location = 'ClientList.php';</script>";
-        } else{
-            echo "<script>alert('Erro ao editar o registro.');</script>";
-            echo "<script>window.history.back();</script>";
-        }
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -91,36 +72,48 @@
     </section><!-- End Breadcrumbs -->
 
     <?php
-        if(isset($_POST["cpf"])){
-            $cpf = $_POST["cpf"];
-            $sql = "SELECT * FROM cliente WHERE cpf = $cpf";
-            $consulta = $connect->query($sql);
-            $cliente = $consulta->fetch_assoc();
+        include_once("Connect.php");
+        if(isset($_POST['nome'])){
+            $cpf = urldecode($_GET['cpf']);
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $telefone = $_POST['telefone'];
+            $sql = "UPDATE cliente SET cpf = $cpf ,
+            nome = $nome ,
+            email = $email ,
+            telefone = $telefone";
         }
+        if (isset($_GET['cpf'])){
+          $cpf = urldecode($_GET['cpf']);
+          $sql = "SELECT * FROM cliente WHERE cpf = '$cpf'";
+          $result = $connect->query($sql);
+          $data = $result->fetch_assoc();
+        }
+
     ?>
 
     <!--Formulário-->
     <section class="u-clearfix u-section-1" id="sec-48e0">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form-15">
-          <form action="ClientUpdate.php?cpf=<?php echo $_POST['cpf']?>" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
+          <form action="ClientUpdate.php?cpf=<?php echo $_GET['cpf'];?>" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-0f4e" class="u-label">Nome</label>
-              <input type="text" placeholder="Nome do cliente" value="<?php echo $cliente["nome"]?>" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
+              <input type="text" placeholder="Nome do cliente" value="<?php echo $data['nome'];?>" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-0f4e" class="u-label">Email</label>
-              <input type="email" placeholder="Email do Cliente" value="<?php echo $cliente["email"]?>" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <input type="email" placeholder="Email do Cliente" value="<?php echo $data['email'];?>" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-email u-form-group">
             <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
-              <label for="cnpj-0f4e" class="u-label">CPF</label>
-              <input type="cnpj" placeholder="CPF do Cliente" value="<?php echo $cliente["cpf"]?>" id="email-0f4e" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <label for="txtCpf" class="u-label">CPF</label>
+              <input type="cnpj" placeholder="CPF do Cliente" minlength="14" maxlength="14" onkeypress = "aplicarCpfMask(txtCpf)" value="<?php echo $data['cpf'];?>" id="txtCpf" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-group u-form-group-3">
             <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
               <label for="senha-e8fa" class="u-label">Telefone Celular</label>
-              <input type="tel"  placeholder="XXXXX-XXXX" value="<?php echo $cliente["telefone"]?>" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+              <input type="tel"  placeholder="XXXXX-XXXX" minlength="15" maxlength="15" onkeypress = "aplicarTelMask(txtCpf)" value="<?php echo $data['telefone'];?>" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <input type="submit" value="Cadastrar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
