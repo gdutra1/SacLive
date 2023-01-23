@@ -107,9 +107,8 @@ window.location = 'ClientDelete.php?cpf=' + cpf;
                 <td><?php echo $row["nome"] ?></td>
                 <td><?php echo $row["email"] ?></td>
                 <td><?php echo $row["telefone"] ?></td>
-                <td><a href="ClientUpdate.php?cpf=<?php echo $row["cpf"] ?>">Editar</a></td>
-                <td><a href="#" onclick="apagar('<?php echo $row["nome"] ?>','<?php echo
-$row["cpf"] ?>');"> Excluir</a></td>
+                <td><a href="ClientUpdate.php?cpf=<?php echo urlencode($row["cpf"]);?>">Editar</a></td>
+                <td><a href="#" onclick="apagar('<?php echo $row["nome"] ?>','<?php echo urlencode($row["cpf"]) ?>');"> Excluir</a></td>
             </tr>
 
             <?php
