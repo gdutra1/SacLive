@@ -12,7 +12,7 @@
     //$cnpj =$_SESSION["cnpj"];
 
 
-    $sql = "INSERT INTO animal (nome, cpf_dono, cnpj_clinica, data_nascimento, observacoes) VALUES ('".$nome."',".$cpf.",'".$cnpj."',".$nascimento.",'".$obs."')";
+    $sql = "INSERT INTO animal (nome, cpf_dono, data_nascimento, observacoes) VALUES ('".$nome."',".$cpf.",'".$cnpj."',".$nascimento.",'".$obs."')";
     if ($connect->query($sql) === TRUE) {
         echo "Inserido com sucesso.";
     } else{

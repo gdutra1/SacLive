@@ -84,14 +84,14 @@
               <input type="email" placeholder="Email do Cliente" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-email u-form-group">
-            <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
+              <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
               <label for="cnpj-0f4e" class="u-label">CPF</label>
-              <input type="cnpj" placeholder="CPF do Cliente" id="email-0f4e" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <input type="cnpj" placeholder="CPF do Cliente" onkeypress= "aplicarCpfMask('txtCpf')" maxlength="14" minlength="14" id="txtCpf" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-group u-form-group-3">
-            <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
+              <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
               <label for="senha-e8fa" class="u-label">Telefone Celular</label>
-              <input type="tel"  placeholder="XXXXX-XXXX" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+              <input type="tel"  placeholder="XXXXX-XXXX" id="txtTelefone" onkeypress= "aplicarTelMask('txtTelefone')" minnlength="15" maxlength="15" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <input type="submit" value="Cadastrar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
