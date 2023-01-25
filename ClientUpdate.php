@@ -72,6 +72,7 @@
     </section><!-- End Breadcrumbs -->
 
     <?php
+      session_start();
         include_once("Connect.php");
         if(isset($_POST['nome'])){
             $cpf = urldecode($_GET['cpf']);
@@ -85,7 +86,8 @@
         }
         if (isset($_GET['cpf'])){
           $cpf = urldecode($_GET['cpf']);
-          $sql = "SELECT * FROM cliente WHERE cpf = '$cpf'";
+          $cnpj = $_SESSION['cnpj'];
+          $sql = "SELECT * FROM cliente WHERE cpf = '$cpf' AND cnpj_clinica = '$cnpj'";
           $result = $connect->query($sql);
           $data = $result->fetch_assoc();
         }
