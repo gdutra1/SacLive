@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,11 +100,13 @@
             <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
               <label for="cnpj-0f4e" class="u-label">CPF</label>
               <input type="cnpj" placeholder="CPF do Cliente" value="<?php echo $data["cpf"]; ?>" id="email-0f4e" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+
             </div>
             <div class="u-form-group u-form-group-3">
             <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
               <label for="senha-e8fa" class="u-label">Telefone Celular</label>
               <input type="tel"  placeholder="XXXXX-XXXX" value="<?php echo $data["telefone"];?>" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+
             </div>
             <div class="u-align-center u-form-group u-form-submit">
               <input type="submit" value="Atualizar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
