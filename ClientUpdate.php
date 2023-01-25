@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,51 +71,45 @@
     </section><!-- End Breadcrumbs -->
 
     <?php
-        include_once("Connect.php");
-        if(isset($_POST['nome'])){
-            $cpf = urldecode($_GET['cpf']);
-            $nome = $_POST['nome'];
-            $email = $_POST['email'];
-            $telefone = $_POST['telefone'];
-            $sql = "UPDATE cliente SET cpf = $cpf ,
-            nome = $nome ,
-            email = $email ,
-            telefone = $telefone";
-        }
-        if (isset($_GET['cpf'])){
-          $cpf = urldecode($_GET['cpf']);
-          $sql = "SELECT * FROM cliente WHERE cpf = '$cpf'";
-          $result = $connect->query($sql);
-          $data = $result->fetch_assoc();
-        }
-
+            include_once("Connect.php");
+            $cpf = urldecode($_GET["cpf"]);
+            $sql = "SELECT (nome,telefone,email) FROM cliente WHERE cpf = '$cpf'";
+            $resultado = $connect->query($sql);
+            if ($resultado->num_rows > 0) {
+            $data = $resultado->fetch_assoc();
+          } else {
+            echo $sql;
+          }
+            //die();
     ?>
 
     <!--Formulário-->
     <section class="u-clearfix u-section-1" id="sec-48e0">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form-15">
-          <form action="ClientUpdate.php?cpf=<?php echo $_GET['cpf'];?>" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
+          <form action="ClientUpdate.php?cpf=<?php echo urldecode($_GET['cpf']);?>" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
             <div class="u-form-group u-form-name">
               <label for="name-0f4e" class="u-label">Nome</label>
-              <input type="text" placeholder="Nome do cliente" value="<?php echo $data['nome'];?>" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
+              <input type="text" placeholder="Nome do cliente" value="<?php echo $data['nome']; ?>" minlength="3" id="name-0f4e" name="txtNome" autofocus class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-1" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-0f4e" class="u-label">Email</label>
-              <input type="email" placeholder="Email do Cliente" value="<?php echo $data['email'];?>" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <input type="email" placeholder="Email do Cliente" value="<?php echo $data["email"]; ?>" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
             <div class="u-form-email u-form-group">
             <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
-              <label for="txtCpf" class="u-label">CPF</label>
-              <input type="cnpj" placeholder="CPF do Cliente" minlength="14" maxlength="14" onkeypress = "aplicarCpfMask(txtCpf)" value="<?php echo $data['cpf'];?>" id="txtCpf" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <label for="cnpj-0f4e" class="u-label">CPF</label>
+              <input type="cnpj" placeholder="CPF do Cliente" value="<?php echo $data["cpf"]; ?>" id="email-0f4e" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+
             </div>
             <div class="u-form-group u-form-group-3">
             <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
               <label for="senha-e8fa" class="u-label">Telefone Celular</label>
-              <input type="tel"  placeholder="XXXXX-XXXX" minlength="15" maxlength="15" onkeypress = "aplicarTelMask(txtCpf)" value="<?php echo $data['telefone'];?>" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+              <input type="tel"  placeholder="XXXXX-XXXX" value="<?php echo $data["telefone"];?>" id="telefone-e8fa" minnlength="5" name="txtTelefone" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-3">
+
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <input type="submit" value="Cadastrar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
+              <input type="submit" value="Atualizar" class="u-active-palette-4-dark-1 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-4-dark-1 u-radius-20">
             </div>
           </form>
           </section>

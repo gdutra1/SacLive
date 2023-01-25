@@ -1,6 +1,7 @@
 <?php
-    include ("Connect.php");
-    $sql = "DELETE * FROM cliente WHERE cpf = ".$_GET["cpf"];
+    include_once("Connect.php");
+    $cpf = urldecode($_GET[cpf]);
+    $sql = "DELETE * FROM cliente WHERE cpf = '$cpf'";
     if ($connect->query($sql) === TRUE) {
         echo "<script>alert('Deletado com sucesso');</script>";
         echo "<script>window.location = 'ClientList.php';</script>";
