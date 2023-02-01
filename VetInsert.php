@@ -1,13 +1,14 @@
 <?php
     include "Connect.php";
-    $cnpj = $_POST["txtCnpj"];
+    session_start();
     $nome = $_POST["txtNome"];
     $email = $_POST["txtEmail"];
-    $senha = $_POST["txtSenha"];
+    $cnpj = $_SESSION["cnpj"];
 
-    $sql = "INSERT INTO veterinario (cnpj, nome, email, telefone) VALUES (".$cnpj.",'".$nome."','".$email."','".$senha."')";
+    $sql = "INSERT INTO veterinario (nome, email, cnpj_clinica) VALUES ('".$nome."','".$email."','".$cnpj."')";
     if ($connect->query($sql) === TRUE) {
-        echo "Inserido com sucesso.";
+        echo "<script>alert('Cadastro realizado com sucesso!');</script>";
+        echo "<script>window.location = 'cadastroVeterinario.php';</script>";
     } else{
         echo "Erro ao Inserir: " . $sql . "<br>" . $connect->error;
     }

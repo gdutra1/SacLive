@@ -85,7 +85,7 @@ window.location = 'ClientDelete.php?cpf=' + cpf;
 <?php
     include_once("Connect.php");
     $cnpj = $_SESSION["cnpj"];
-    $sql = "SELECT id_veterinario, nome, email, telefone FROM veterinario WHERE cnpj_clinica = '$cnpj'";
+    $sql = "SELECT id_veterinario, nome, email FROM veterinario WHERE cnpj_clinica = '$cnpj'";
     $resultado = $connect->query($sql);
     if ($resultado->num_rows > 0) {
          
@@ -107,7 +107,6 @@ window.location = 'ClientDelete.php?cpf=' + cpf;
                 <td><?php echo $row["id_veterinario"] ?></td>
                 <td><?php echo $row["nome"] ?></td>
                 <td><?php echo $row["email"] ?></td>
-                <td><?php echo $row["telefone"] ?></td>
                 <td><a href="">Editar</a></td>
                 <td><a href="">Excluir</a></td>
             </tr>

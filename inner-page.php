@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/cssParticular.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.8.0
@@ -62,7 +63,6 @@
               <li><a href="cadastroVeterinario.php">Veterinário</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Marcar Consulta</a></li>
           <li><a class="getstarted scrollto" href="index.html">Sair</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -82,9 +82,9 @@
 
     <section class="inner-page">
       <div class="container">
-        <p>
-          Example inner page template
-        </p>
+        <div class="divprincipal">
+          <a href="marcarConsulta.php">Nova Consulta</a>
+        </div>
       </div>
     </section>
 
