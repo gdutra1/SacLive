@@ -1,4 +1,34 @@
+<?php
+      session_start();
+        include_once("Connect.php");
+        if(isset($_POST["txtNome"])){
+            $cpf2 = urldecode($_GET['cpf']);
+            $cnpj2 = $_SESSION["cnpj"];
+            $nome = $_POST["txtNome"];
+            $email = $_POST["txtEmail"];
+            $telefone = $_POST["txtTelefone"];
+            $sql = "UPDATE cliente SET
+            nome = '$nome' ,
+            email = '$email' ,
+            telefone = '$telefone'
+            WHERE cpf = '$cpf2' AND cnpj_clinica = '$cnpj2'";
 
+            if ($connect->query($sql) === TRUE) {
+          ?>
+              <script>
+                alert("Sucesso!");
+                window.location = "ClientList.php";
+              </script>
+            <?php
+            } else {
+              ?>
+              <script>
+                alert("<?php $sql ?>");
+              </script>
+            <?php
+            }
+        }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,26 +102,13 @@
     </section><!-- End Breadcrumbs -->
 
     <?php
-      session_start();
-        include_once("Connect.php");
-        if(isset($_POST['nome'])){
-            $cpf = urldecode($_GET['cpf']);
-            $nome = $_POST['nome'];
-            $email = $_POST['email'];
-            $telefone = $_POST['telefone'];
-            $sql = "UPDATE cliente SET cpf = $cpf ,
-            nome = $nome ,
-            email = $email ,
-            telefone = $telefone";
-        }
-        if (isset($_GET['cpf'])){
-          $cpf = urldecode($_GET['cpf']);
-          $cnpj = $_SESSION['cnpj'];
-          $sql = "SELECT * FROM cliente WHERE cpf = '$cpf' AND cnpj_clinica = '$cnpj'";
+          if (isset($_GET["cpf"])){
+          $cpf1 = urldecode($_GET["cpf"]);
+          $cnpj1 = $_SESSION["cnpj"];
+          $sql = "SELECT * FROM cliente WHERE cpf = '$cpf1' AND cnpj_clinica = '$cnpj1'";
           $result = $connect->query($sql);
           $data = $result->fetch_assoc();
         }
-
     ?>
 
     <!--Formulário-->
@@ -107,11 +124,13 @@
               <label for="email-0f4e" class="u-label">Email</label>
               <input type="email" placeholder="Email do Cliente" value="<?php echo $data['email'];?>" id="email-0f4e" name="txtEmail" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
+            <!--
             <div class="u-form-email u-form-group">
             <script type = "text/javascript" src="scripts/cpfInputMask.js"></script>
               <label for="txtCpf" class="u-label">CPF</label>
-              <input type="cnpj" placeholder="CPF do Cliente" minlength="14" maxlength="14" onkeypress = "aplicarCpfMask(txtCpf)" value="<?php echo $data['cpf'];?>" id="txtCpf" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
+              <input type="cnpj" placeholder="CPF do Cliente" minlength="14" maxlength="14" onkeypress = "aplicarCpfMask(txtCpf)" value="<?php //echo urldecode($_GET['cpf']);?>" id="txtCpf" name="txtCpf" class="u-border-3 u-border-palette-4-base u-custom-font u-input u-input-rectangle u-palette-4-light-3 u-radius-30 u-text-font u-input-2" required="">
             </div>
+             -->
             <div class="u-form-group u-form-group-3">
             <script type = "text/javascript" src="scripts/telefoneInputMask.js"></script>
               <label for="senha-e8fa" class="u-label">Telefone Celular</label>
