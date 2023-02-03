@@ -36,9 +36,9 @@
   ======================================================== -->
 
   <script type="text/javascript">
-function apagar(nome, cpf) {
-if (window.confirm("Deseja realmente apagar este registro:\n" + "Nome: " + nome + "\n" + "CPF: " + cpf)) {
-window.location = 'ClientDelete.php?cpf=' + cpf;
+function apagar(nome, id) {
+if (window.confirm("Deseja realmente apagar este registro:\n" + "Nome: " + nome + "\n" + "ID: " + id)) {
+window.location = 'AnimalDelete.php?id_animal=' + id;
 }
 }
 </script>
@@ -118,8 +118,8 @@ window.location = 'ClientDelete.php?cpf=' + cpf;
                 <td><?php echo $row["altura"] ?></td>
                 <td><?php echo $row["largura"] ?></td>
                 <td><?php echo $row["observacoes"] ?></td>
-                <td><a href="">Editar</a></td>
-                <td><a href="">Excluir</a></td>
+                <td><a href="AnimalUpdate.php?id_animal=<?php echo $row['id_animal'];?>">Editar</a></td>
+                <td><a href="#" onclick="apagar('<?php echo $row['nome'] ?>','<?php echo $row['id_animal'] ?>');"> Excluir</a></td>
             </tr>
 
             <?php

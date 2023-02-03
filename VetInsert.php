@@ -12,5 +12,4 @@
     } else{
         echo "Erro ao Inserir: " . $sql . "<br>" . $connect->error;
     }
-    $connect->close();
 ?>

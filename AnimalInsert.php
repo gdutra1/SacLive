@@ -1,5 +1,5 @@
 <?php
-    include "Connect.php";
+    include_once("Connect.php");
     session_start();
     $nome = $_POST["txtNomeAnimal"];
     $cpf = $_POST["txtCpfDono"];
@@ -19,5 +19,4 @@
     } else{
         echo "Erro ao Inserir: " . $sql . "<br>" . $connect->error;
     }
-    $connect->close();
 ?>
